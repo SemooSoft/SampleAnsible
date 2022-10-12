@@ -1,0 +1,11 @@
+---
+- hosts: all
+  user : ubuntu
+  become: true
+  tasks:
+    - name: Print message
+      apt:
+        update_cache: yes
+    - name: Print message
+      apt:
+        name : nginx
